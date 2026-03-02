@@ -36,9 +36,6 @@ class AvailableCurrencyStoreTable extends CurrencyStoreTable
         $this->currencyQuery = $currencyQuery;
     }
 
-    /**
-     * @return string
-     */
     protected function getBaseUrlPath(): string
     {
         return 'available-currency-table';

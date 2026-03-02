@@ -43,11 +43,6 @@ class AvailableCurrenciesStoreRelationTabs extends AbstractTabs
      */
     protected const ASSIGNED_TAB_TEMPLATE = '@CurrencyGui/_partials/_tables/assignment-currency-table.twig';
 
-    /**
-     * @param \Generated\Shared\Transfer\TabsViewTransfer $tabsViewTransfer
-     *
-     * @return \Generated\Shared\Transfer\TabsViewTransfer
-     */
     protected function build(TabsViewTransfer $tabsViewTransfer): TabsViewTransfer
     {
         $this->addAvailableCurrencyTab($tabsViewTransfer)

@@ -9,8 +9,5 @@ namespace Spryker\Zed\CurrencyGui\Dependency\Facade;
 
 interface CurrencyGuiToStoreFacadeInterface
 {
-    /**
-     * @return bool
-     */
     public function isDynamicStoreEnabled(): bool;
 }

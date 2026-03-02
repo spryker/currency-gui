@@ -35,11 +35,6 @@ class CurrencyGuiToCurrencyFacadeBridge implements CurrencyGuiToCurrencyFacadeIn
         return $this->currencyFacade->expandStoreTransfersWithCurrencies($storeTransfers);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CurrencyCriteriaTransfer $currencyCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CurrencyCollectionTransfer
-     */
     public function getCurrencyCollection(CurrencyCriteriaTransfer $currencyCriteriaTransfer): CurrencyCollectionTransfer
     {
         return $this->currencyFacade->getCurrencyCollection($currencyCriteriaTransfer);

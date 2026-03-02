@@ -18,9 +18,6 @@ class StoreCurrencyFormDataProvider
      */
     protected CurrencyGuiToCurrencyFacadeInterface $currencyFacade;
 
-    /**
-     * @param \Spryker\Zed\CurrencyGui\Dependency\Facade\CurrencyGuiToCurrencyFacadeInterface $currencyFacade
-     */
     public function __construct(CurrencyGuiToCurrencyFacadeInterface $currencyFacade)
     {
         $this->currencyFacade = $currencyFacade;

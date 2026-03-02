@@ -28,19 +28,11 @@ class StoreTableExpander implements StoreTableExpanderInterface
      */
     protected CurrencyGuiToStoreFacadeInterface $storeFacade;
 
-    /**
-     * @param \Spryker\Zed\CurrencyGui\Dependency\Facade\CurrencyGuiToStoreFacadeInterface $storeFacade
-     */
     public function __construct(CurrencyGuiToStoreFacadeInterface $storeFacade)
     {
         $this->storeFacade = $storeFacade;
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     public function expandConfig(TableConfiguration $config): TableConfiguration
     {
         /* Required by infrastructure, exists only for BC with DMS OFF mode. */

@@ -19,10 +19,5 @@ interface CurrencyGuiToCurrencyFacadeInterface
      */
     public function expandStoreTransfersWithCurrencies(array $storeTransfers): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\CurrencyCriteriaTransfer $currencyCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CurrencyCollectionTransfer
-     */
     public function getCurrencyCollection(CurrencyCriteriaTransfer $currencyCriteriaTransfer): CurrencyCollectionTransfer;
 }

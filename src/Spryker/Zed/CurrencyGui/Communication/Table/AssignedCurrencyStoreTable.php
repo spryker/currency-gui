@@ -33,9 +33,6 @@ class AssignedCurrencyStoreTable extends CurrencyStoreTable
         $this->currencyStoreQuery = $currencyStoreQuery;
     }
 
-    /**
-     * @return string
-     */
     protected function getBaseUrlPath(): string
     {
         return 'assigned-currency-table';

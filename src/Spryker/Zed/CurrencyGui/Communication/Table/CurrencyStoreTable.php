@@ -86,11 +86,6 @@ abstract class CurrencyStoreTable extends AbstractTable
         $this->currencyStoreTableExpanders = $currencyStoreTableExpanders;
     }
 
-    /**
-     * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
-     *
-     * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
-     */
     protected function configure(TableConfiguration $config): TableConfiguration
     {
         $config->setHeader([
@@ -119,9 +114,6 @@ abstract class CurrencyStoreTable extends AbstractTable
         return $config;
     }
 
-    /**
-     * @return string
-     */
     protected function getUrlPath(): string
     {
         $path = $this->getBaseUrlPath();
@@ -151,9 +143,6 @@ abstract class CurrencyStoreTable extends AbstractTable
         return $preparedData;
     }
 
-    /**
-     * @return string
-     */
     abstract protected function getBaseUrlPath(): string;
 
     /**
@@ -163,9 +152,6 @@ abstract class CurrencyStoreTable extends AbstractTable
      */
     abstract protected function getRawData(TableConfiguration $config): array;
 
-    /**
-     * @return string
-     */
     protected function getUrl(): string
     {
         return Url::generate($this->getUrlPath(), [static::PARAM_STORE_ID => $this->idStore]);

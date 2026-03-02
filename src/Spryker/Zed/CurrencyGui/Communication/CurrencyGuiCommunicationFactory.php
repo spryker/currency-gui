@@ -32,17 +32,11 @@ use Twig\Environment;
  */
 class CurrencyGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Symfony\Component\Form\FormTypeInterface
-     */
     public function createStoreCurrencyForm(): FormTypeInterface
     {
         return new StoreCurrencyForm();
     }
 
-    /**
-     * @return \Spryker\Zed\CurrencyGui\Communication\Form\DataProvider\StoreCurrencyFormDataProvider
-     */
     public function createStoreCurrencyFormDataProvider(): StoreCurrencyFormDataProvider
     {
         return new StoreCurrencyFormDataProvider(
@@ -65,11 +59,6 @@ class CurrencyGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @param int|null $idStore
-     *
-     * @return \Spryker\Zed\CurrencyGui\Communication\Table\CurrencyStoreTable
-     */
     public function createSelectableAssignedCurrencyStoreTable(?int $idStore): CurrencyStoreTable
     {
         return new AssignedCurrencyStoreTable(
@@ -79,11 +68,6 @@ class CurrencyGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @param int|null $idStore
-     *
-     * @return \Spryker\Zed\CurrencyGui\Communication\Table\CurrencyStoreTable
-     */
     public function createSelectableAvailableCurrencyStoreTable(?int $idStore): CurrencyStoreTable
     {
         return new AvailableCurrencyStoreTable(
@@ -93,25 +77,16 @@ class CurrencyGuiCommunicationFactory extends AbstractCommunicationFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CurrencyGui\Communication\Expander\CurrencyStoreTableExpanderInterface
-     */
     public function createCurrencyStoreTableSelectableExpander(): CurrencyStoreTableExpanderInterface
     {
         return new SelectableCurrencyStoreTableExpander();
     }
 
-    /**
-     * @return \Spryker\Zed\CurrencyGui\Dependency\Facade\CurrencyGuiToCurrencyFacadeInterface
-     */
     public function getCurrencyFacade(): CurrencyGuiToCurrencyFacadeInterface
     {
         return $this->getProvidedDependency(CurrencyGuiDependencyProvider::FACADE_CURRENCY);
     }
 
-    /**
-     * @return \Spryker\Zed\CurrencyGui\Dependency\Facade\CurrencyGuiToStoreFacadeInterface
-     */
     public function getStoreFacade(): CurrencyGuiToStoreFacadeInterface
     {
         return $this->getProvidedDependency(CurrencyGuiDependencyProvider::FACADE_STORE);
@@ -133,33 +108,21 @@ class CurrencyGuiCommunicationFactory extends AbstractCommunicationFactory
         return $this->getProvidedDependency(CurrencyGuiDependencyProvider::PROPEL_QUERY_CURRENCY);
     }
 
-    /**
-     * @return \Spryker\Zed\CurrencyGui\Communication\Expander\StoreTableExpanderInterface
-     */
     public function createStoreTableExpander(): StoreTableExpanderInterface
     {
         return new StoreTableExpander($this->getStoreFacade());
     }
 
-    /**
-     * @return \Twig\Environment
-     */
     public function getTwigEnvironment(): Environment
     {
         return $this->getProvidedDependency(CurrencyGuiDependencyProvider::RENDERER);
     }
 
-    /**
-     * @return \Spryker\Zed\CurrencyGui\Communication\Tabs\AvailableCurrenciesStoreRelationTabs
-     */
     public function createAvailableCurrencyRelationTabs(): AvailableCurrenciesStoreRelationTabs
     {
         return new AvailableCurrenciesStoreRelationTabs();
     }
 
-    /**
-     * @return \Spryker\Zed\CurrencyGui\Communication\Tabs\AssignedCurrenciesStoreRelationTabs
-     */
     public function createAssignedCurrencyRelationTabs(): AssignedCurrenciesStoreRelationTabs
     {
         return new AssignedCurrenciesStoreRelationTabs();

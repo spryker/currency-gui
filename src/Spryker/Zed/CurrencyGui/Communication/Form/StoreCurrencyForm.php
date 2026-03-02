@@ -103,11 +103,6 @@ class StoreCurrencyForm extends AbstractType
         });
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormEvent $formEvent
-     *
-     * @return void
-     */
     protected function executePreSubmitHandler(FormEvent $formEvent): void
     {
         $eventData = $formEvent->getData();
